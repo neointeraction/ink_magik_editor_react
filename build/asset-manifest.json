@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "./static/css/main.ee63d040.css",
+    "main.js": "./static/js/main.9a5bab37.js",
+    "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "./static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/Ink-Logo.svg": "./static/media/Ink-Logo.b80421a256b1e4a6728cc1692883ed63.svg",
+    "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
+    "static/media/objectShape.svg": "./static/media/objectShape.74d4ff4a4c620baaefb40e7e0cf0e433.svg",
+    "index.html": "./index.html",
+    "static/media/Add.svg": "./static/media/Add.3f57a2dd45bb04b7753d425723aa4b27.svg",
+    "static/media/square.svg": "./static/media/square.dc9cd02589368a3915431ffe97ab963e.svg",
+    "static/media/triangle.svg": "./static/media/triangle.575706b703f25a5021f56352416cf2a1.svg",
+    "static/media/circle.svg": "./static/media/circle.e27ca0395b67dd4c9fc1031d641aa330.svg",
+    "static/media/Line.svg": "./static/media/Line.98b7e8867c644c7fe7a1a977edbfbaf9.svg",
+    "main.ee63d040.css.map": "./static/css/main.ee63d040.css.map",
+    "main.9a5bab37.js.map": "./static/js/main.9a5bab37.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee63d040.css",
+    "static/js/main.9a5bab37.js"
+  ]
+}

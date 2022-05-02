@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1{fill:#ff408a}
+        </style>
+    </defs>
+    <g id="Add" transform="translate(-1623 -435)">
+        <path id="Rectangle_637" d="M0 0H2V24H0z" class="cls-1" data-name="Rectangle 637" transform="translate(1634 435)"/>
+        <path id="Rectangle_638" d="M0 0H2V24H0z" class="cls-1" data-name="Rectangle 638" transform="rotate(90 600.5 1046.5)"/>
+    </g>
+</svg>

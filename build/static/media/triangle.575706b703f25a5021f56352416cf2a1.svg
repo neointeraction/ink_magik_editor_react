@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 70 70">
+                          <g id="Triangle" fill="none" stroke="none">
+                            <path d="M35 0l35 70H0z"></path>
+                            <path className="object-icon"  d="M35 4.472L3.236 68h63.528L35 4.472M35 0l35 70H0L35 0z"></path>
+                          </g>
+                        </svg>
