@@ -1,5 +1,4 @@
 import React, { useState, useEffect, createContext } from "react";
-import { fabric } from "fabric";
 
 export const EditorContext = createContext();
 
@@ -11,6 +10,7 @@ export const EditorProvider = (props) => {
   const [object, setObject] = useState();
   const [canvasInstance, setCanvasInstance] = useState([...canvas]);
   const [showSettingsPanel, setShowSettingsPanel] = useState();
+  const [editorZoomDisplay, setEditorZoomDisplay] = useState(false);
   // canvas initalization
   useEffect(() => {
     setCanvasIndex(1);
@@ -26,33 +26,6 @@ export const EditorProvider = (props) => {
   const addCanvas = () => {
     setCanvasIndex(canvasIndex + 1);
     canvasCount.push(`canvas-element-${canvasIndex}`);
-  };
-
-  // add rectangle
-  const addRect = (canvas) => {
-    const rect = new fabric.Rect({
-      height: 280,
-      width: 200,
-      fill: "#0062B1",
-      left: 100,
-      top: 100,
-    });
-    canvas.add(rect);
-    canvas.renderAll();
-    setObject(canvas);
-  };
-
-  // add circle
-  const addCircle = (canvas) => {
-    const circle = new fabric.Circle({
-      radius: 80,
-      fill: "black",
-      left: 150,
-      top: 150,
-    });
-    canvas.add(circle);
-    canvas.renderAll();
-    setObject(canvas);
   };
 
   // function to check which canvas is selected
@@ -77,14 +50,16 @@ export const EditorProvider = (props) => {
           setCanvasId,
           object,
           setObject,
-          addRect,
-          addCircle,
+          // addRect,
+          // addCircle,
           checkCanvas,
           addCanvas,
           canvasInstance,
           setCanvasInstance,
           showSettingsPanel,
           setShowSettingsPanel,
+          editorZoomDisplay,
+          setEditorZoomDisplay,
         },
       ]}
     >

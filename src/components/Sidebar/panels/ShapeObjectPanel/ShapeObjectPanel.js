@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useEffect } from "react";
 
 import SettingsPanel from "./panel/SettingsPanel";
 
@@ -15,7 +15,7 @@ import { ReactComponent as Circle } from "../../../../assets/icons/circle.svg";
 import { ReactComponent as Square } from "../../../../assets/icons/square.svg";
 import { ReactComponent as Triangle } from "../../../../assets/icons/triangle.svg";
 
-const ShapeObjectPanel = ({ context }) => {
+const ShapeObjectPanel = ({ context, contextObject }) => {
   useEffect(() => {
     handlePanelToggle();
   }, [context.object?.getActiveObject(), context.showSettingsPanel]);
@@ -44,7 +44,7 @@ const ShapeObjectPanel = ({ context }) => {
             <ObjectListItem>
               <ListButton
                 onClick={() => {
-                  context.addCircle(
+                  contextObject.addCircle(
                     context.canvas[
                       context.canvasId
                         ? context.checkCanvas(context.canvasId)
@@ -59,7 +59,7 @@ const ShapeObjectPanel = ({ context }) => {
             <ObjectListItem>
               <ListButton
                 onClick={() => {
-                  context.addRect(
+                  contextObject.addRect(
                     context.canvas[
                       context.canvasId
                         ? context.checkCanvas(context.canvasId)

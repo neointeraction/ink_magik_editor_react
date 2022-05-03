@@ -8,11 +8,14 @@ export const BodyContainer = styled.div`
 
 export const EditorContainer = styled.div`
   flex-basis: 83%;
-  max-height: calc(99vh - 50px);
+  max-height: calc(99vh - 53px);
   overflow: auto;
-  /* scrollbar */
+  display: flex;
+  justify-content: ${(props) => (props.displayItem ? "flex-start" : "center")};
+  align-items: ${(props) => (props.displayItem ? "flex-start" : "flex-start")};
+
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
   /* Track */
   ::-webkit-scrollbar-track {
@@ -25,6 +28,12 @@ export const EditorContainer = styled.div`
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: ${(props) => props.theme.borderColor};
+  }
+  ::-webkit-scrollbar:horizontal {
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb:horizontal {
+    height: 8px;
   }
 `;
 
