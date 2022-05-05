@@ -31,13 +31,21 @@ const Canvas = ({ id, setCanvasId, canvas, currentCanvas, setPanelId }) => {
   };
 
   const canvasClickEvents = (e) => {
+    e.stopPropagation();
     // getting canvas ID
     setCanvasId(canvasRef?.current?.id);
-
+    console.log(currentCanvas.getActiveObject(), "ss");
     // show canvas panel in sidebar
-    currentCanvas?.on("mouse:down", (options) => {
-      currentCanvas.getActiveObject() === null && setPanelId("");
-    });
+    if (
+      currentCanvas.getActiveObject() === null ||
+      currentCanvas.getActiveObject() === undefined ||
+      !currentCanvas.getActiveObject()
+    ) {
+      setPanelId("");
+    }
+    // currentCanvas?.on("mouse:down", (options) => {
+    //  setPanelId("");
+    // });
   };
 
   return (
