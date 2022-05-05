@@ -5,12 +5,15 @@ import "./assets/css/index.css";
 
 import { EditorProvider } from "./context/EditorContext";
 import { ObjectProvider } from "./context/ObjectContext";
+import { ImageProvider } from "./context/ImageContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <EditorProvider>
       <ObjectProvider>
-        <App />
+        <ImageProvider>
+          <App />
+        </ImageProvider>
       </ObjectProvider>
     </EditorProvider>
   </React.StrictMode>,

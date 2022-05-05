@@ -13,6 +13,7 @@ import {
 import Logo from "../../assets/images/Ink-Logo.svg";
 
 import { ReactComponent as ObjectShape } from "../../assets/icons/objectShape.svg";
+import { ReactComponent as ImageAddIcon } from "../../assets/icons/imageAdd.svg";
 
 const Sidebar = ({ setTheme, setPanelId }) => {
   const [checked, setChecked] = useState(true);
@@ -51,6 +52,9 @@ const Sidebar = ({ setTheme, setPanelId }) => {
       </NavbarLeft>
       <NavbarCenter>
         <List>
+          <ListItem onClick={() => getMenuId("image")}>
+            <ImageAddIcon />
+          </ListItem>
           <ListItem onClick={() => getMenuId("object/shape")}>
             <ObjectShape />
           </ListItem>

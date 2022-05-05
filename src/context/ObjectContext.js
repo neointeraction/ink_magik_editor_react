@@ -18,7 +18,18 @@ export const ObjectProvider = (props) => {
       top: 100,
     });
     rect.guides = {};
+    rect.toObject = (function (toObject) {
+      return function (propertiesToInclude) {
+        return fabric.util.object.extend(
+          toObject.call(this, propertiesToInclude),
+          {
+            guides: {},
+          }
+        );
+      };
+    })(rect.toObject);
     canvas.add(rect);
+    canvas.centerObject(rect);
     canvas.renderAll();
     context.setObject(canvas);
   };
@@ -32,7 +43,18 @@ export const ObjectProvider = (props) => {
       top: 150,
     });
     circle.guides = {};
+    circle.toObject = (function (toObject) {
+      return function (propertiesToInclude) {
+        return fabric.util.object.extend(
+          toObject.call(this, propertiesToInclude),
+          {
+            guides: {},
+          }
+        );
+      };
+    })(circle.toObject);
     canvas.add(circle);
+    canvas.centerObject(circle);
     canvas.renderAll();
     context.setObject(canvas);
   };

@@ -64,7 +64,6 @@ const CanvasPanel = ({ context }) => {
   //     ]);
   //   });
   // };
-  // console.log(thumbnail, "context.canvasInstance");
 
   const changeCanvasColor = (color) => {
     context.canvas[context.checkCanvas(context.canvasId)].backgroundColor =

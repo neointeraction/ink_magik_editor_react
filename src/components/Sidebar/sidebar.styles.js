@@ -180,7 +180,7 @@ export const ObjectSelectList = styled.ul`
   margin-bottom: 20px;
 `;
 
-export const ObjectListItem = styled.div`
+export const ObjectListItem = styled.li`
   flex-basis: 25%;
   border-radius: 4px;
   margin: 5px;
@@ -213,5 +213,54 @@ export const ListButton = styled.div`
       stroke: #ff408a;
       transition: 0.3s all ease-in-out;
     }
+  }
+`;
+
+export const UploadImageFlex = styled.ul`
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  margin-top: 5px;
+  margin-bottom: 20px;
+`;
+
+export const ImageItem = styled.li`
+  flex-basis: 25%;
+  border-radius: 4px;
+  margin: 5px;
+  :first-child {
+    margin-left: 0;
+  }
+  :last-child {
+    margin-right: 0;
+  }
+`;
+
+export const UploadButton = styled.label`
+  cursor: pointer;
+  background-color: #0ba5f2;
+  font-size: 11px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.29;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px 10px;
+  border-radius: 4px;
+  input {
+    display: none;
+  }
+  img {
+    width: fit-content;
+  }
+
+  span {
+    flex-basis: 80%;
+    display: block;
   }
 `;

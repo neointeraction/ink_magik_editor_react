@@ -28,6 +28,7 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   list-style: none;
+  margin-right: 15px;
 `;
 
 export const NavbarCenter = styled.div`

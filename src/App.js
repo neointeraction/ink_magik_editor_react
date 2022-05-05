@@ -19,7 +19,7 @@ function App() {
   const [context] = useContext(EditorContext);
   const [theme, setTheme] = useState("dark");
   const [panelId, setPanelId] = useState(null);
-  console.log(context.editorZoomDisplay, "context.editorZoomDisplay");
+
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
