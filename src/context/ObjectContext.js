@@ -30,6 +30,7 @@ export const ObjectProvider = (props) => {
     })(rect.toObject);
     canvas.add(rect);
     canvas.centerObject(rect);
+    canvas.setActiveObject(rect);
     canvas.renderAll();
     context.setObject(canvas);
   };
@@ -55,6 +56,7 @@ export const ObjectProvider = (props) => {
     })(circle.toObject);
     canvas.add(circle);
     canvas.centerObject(circle);
+    canvas.setActiveObject(circle);
     canvas.renderAll();
     context.setObject(canvas);
   };

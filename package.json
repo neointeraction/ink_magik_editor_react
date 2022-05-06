@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "fabric": "^5.2.1",
+    "fabric-history": "^1.6.0",
     "react": "^16.12.0",
     "react-color": "^2.19.3",
     "react-dom": "^16.12.0",

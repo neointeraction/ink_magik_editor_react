@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { fabric } from "fabric";
 
 import { gridLines } from "../../methods/gridLines";
+import { keyboardEvents } from "../../methods/keyboardEvents";
 
 const Canvas = ({ id, setCanvasId, canvas, currentCanvas, setPanelId }) => {
   const canvasContainer = useRef();
@@ -16,6 +17,10 @@ const Canvas = ({ id, setCanvasId, canvas, currentCanvas, setPanelId }) => {
 
   useEffect(() => {
     gridLines(currentCanvas);
+  }, [currentCanvas]);
+
+  useEffect(() => {
+    keyboardEvents(currentCanvas);
   }, [currentCanvas]);
 
   const initCanvas = (CanvasId) => {
@@ -34,18 +39,13 @@ const Canvas = ({ id, setCanvasId, canvas, currentCanvas, setPanelId }) => {
     e.stopPropagation();
     // getting canvas ID
     setCanvasId(canvasRef?.current?.id);
-    console.log(currentCanvas.getActiveObject(), "ss");
+
     // show canvas panel in sidebar
-    if (
-      currentCanvas.getActiveObject() === null ||
-      currentCanvas.getActiveObject() === undefined ||
-      !currentCanvas.getActiveObject()
-    ) {
+    if (currentCanvas?.getActiveObject()?.type === "circle") {
+      setPanelId("object/shape");
+    } else if (currentCanvas?.getActiveObject() === null) {
       setPanelId("");
     }
-    // currentCanvas?.on("mouse:down", (options) => {
-    //  setPanelId("");
-    // });
   };
 
   return (
